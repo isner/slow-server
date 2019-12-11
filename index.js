@@ -7,12 +7,14 @@ app.get('/', (req, res) => {
 
   if (isNaN(delay) || delay < 0 || delay > 60000) {
     return res.status(400).send(
-      `query parameter "delay" must be a number between 0 and 60000`
+      `query parameter 'delay' must be a number between 0 and 60000`
     )
   }
   
   setTimeout(() => {
-    return res.status(200).send(`slow-server responded after a ${delay}ms delay`)
+    return res.status(200).send(
+      `slow-server responded after a ${delay}ms delay`
+    )
   }, delay)
 })
 
