@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  const delay = Number(req.query.delay)
+  const delay = Number(req.query.delay || 0)
 
   if (isNaN(delay) || delay < 0 || delay > 60000) {
     return res.status(400).send(
