@@ -1,6 +1,6 @@
 {
   "name": "slow-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic HTTP server that responds after a provided delay",
   "main": "index.js",
   "scripts": {
